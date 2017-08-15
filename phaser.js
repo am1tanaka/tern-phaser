@@ -9896,7 +9896,7 @@
      "!doc": "Draws a single {Phaser.Polygon} triangle from a {Phaser.Point} array"
     },
     "drawTriangles": {
-     "!type": "fn(vertices: [?]|[?], {indices: [?], cull: bool)",
+     "!type": "fn(vertices: [?]|[?], indices: [?], cull: bool)",
      "!doc": "Draws {Phaser.Polygon} triangles"
     },
     "lineStyle": {
