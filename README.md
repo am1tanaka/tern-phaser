@@ -1,3 +1,24 @@
+# このリポジトリーについて
+Tern用のPhaserの設定ファイルを生成するツールをPhaser3に対応させたものです。オリジナルのリポジトリーは以下です。
+
+https://github.com/angelozerr/tern-phaser
+
+## 変更点
+- `generator/jsdoc2tern.js`
+  - `Generator.prototype.visitDoc`関数で、`kind`が`member`だった時に、`isEnum`が`true`かどうかのチェックを追加して、その時はオリジナルの型として`+Enum`に型を繋げたものに変換(例：`+EnumNumber`など)
+  - 関数(`kind`が`function`)の引数に`Object.<string, *>`などがあったら、`*`を`any`に変換(例：`+Object.<string, any>`。戻り値は変換不要
+- `generator/node/template.js`
+  - 冒頭の部分をサードパーティー用のものに変更
+- `generator/data`
+  - 最新のPhaser向けのデータに更新
+  - `data/DataManager.js`に`[type]`が残っていたので、`boolean`に変更
+
+---
+
+以下、オリジナルドキュメント。
+
+---
+
 # tern-phaser
 
 [![Build Status](https://secure.travis-ci.org/angelozerr/tern-phaser.png)](http://travis-ci.org/angelozerr/tern-phaser)
