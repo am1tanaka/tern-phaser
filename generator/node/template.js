@@ -1,5 +1,5 @@
 (function(mod) {
-  mod(process.__infer, proces.__tern);
+  mod(process.__infer, process.__tern);
 })(function(infer, tern) {
   "use strict";
 
